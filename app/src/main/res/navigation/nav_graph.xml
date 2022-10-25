@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/marvelHeroFragment">
+
+    <fragment
+        android:id="@+id/marvelHeroFragment"
+        android:name="com.spiderman.marvel.ui.MarvelHeroFragment"
+        android:label="MarvelHeroFragment" >
+        <action
+            android:id="@+id/action_marvelHeroFragment_to_heroDetailFragment"
+            app:destination="@id/heroDetailFragment"
+            app:popUpToSaveState="true"
+            app:popUpTo="@id/marvelHeroFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/heroDetailFragment"
+        android:name="com.spiderman.marvel.ui.HeroDetailFragment"
+        android:label="HeroDetailFragment" >
+        <argument android:name="result"
+            app:argType="com.spiderman.marvel.models.Result"
+            android:defaultValue="@null"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_heroDetailFragment_to_aboutHeroFragment"
+            app:destination="@id/aboutHeroFragment"
+            app:popUpTo="@id/heroDetailFragment"
+            app:popUpToSaveState="true"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutHeroFragment"
+        android:name="com.spiderman.marvel.ui.AboutHeroFragment"
+        android:label="AboutHeroFragment" >
+    <argument android:name="aboutType"
+        app:argType="com.spiderman.marvel.models.Result"
+        app:nullable="true"
+        android:defaultValue="@null"/>
+    </fragment>
+</navigation>

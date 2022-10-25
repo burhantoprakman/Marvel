@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Marvel</string>
+    <string name="heroes">Heroes</string>
+    <string name="detail">Detail</string>
+    <string name="about_hero">About Hero</string>
+    <string name="pick_hero">Please pick hero for see details</string>
+    <string name="search_text">Where is my favorite?</string>
+    <string name="order_by_ascending">Order by Ascending</string>
+</resources>
